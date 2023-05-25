@@ -28,6 +28,6 @@ document.getElementById("query").addEventListener("keyup",function(event){
             var url = "https://duckduckgo.com/"+search;
             window.open(url);
         }
+        document.getElementById("query").value = "";
     }    
-    document.getElementById("query").value = "";
 })
