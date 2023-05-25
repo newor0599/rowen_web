@@ -2,12 +2,13 @@
 body{
     height: 100dvh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background: rgb(31,31,31);
     background: radial-gradient(circle, rgba(31,31,31,1) 0%, rgba(24,24,24,1) 6%, rgba(0,0,0,1) 100%);
     font-family: 'Quicksand', sans-serif;
     overflow: hidden;
+    flex-direction: column;
 }
 .wrapper{
     text-align: center;
@@ -36,6 +37,10 @@ input{
     }
 }
 
+div{
+    width: 100vw;
+}
+
 button{
     font-family: 'Quicksand', sans-serif;
     width: 100px;
@@ -46,11 +51,16 @@ button{
     backdrop-filter: blur(10px);
     color: ghostwhite;
     animation: grow2 .7s cubic-bezier(0, 0, 0.01, 0.96) forwards;
-    transition: all .5s ease;
+    transition: all .3s ease;
 }
 button:hover{
     cursor: pointer;
     box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.7);
+}
+
+img{
+    -webkit-user-drag: none;
+    animation: fly1 .7s forwards;
 }
 
 p{
@@ -78,6 +88,16 @@ p{
     }
     to{
         transform: translateY(10px);
+        opacity: 1;
+    }
+}
+@keyframes fly1 {
+    from{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(20px);
         opacity: 1;
     }
 }
