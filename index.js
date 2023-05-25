@@ -11,17 +11,20 @@ document.getElementById("query").addEventListener("keyup",function(event){
         if (search == "y"){
             window.open("https://youtube.com");    
         }
-        if (search == "d"){
+        else if (search == "d"){
             window.open("https://discord.com/channels/@me");
         }
-        if(search=="g"){
+        else if(search=="g"){
             window.open("https://github.com")
         }
-        if(search=="r"){
+        else if(search=="r"){
             window.open("https://roblox.com/home")
         }
-        var url = "https://duckduckgo.com/"+search;
-        window.open(url);
+        else{
+            var url = "https://duckduckgo.com/"+search;
+            window.open(url);
+            document.getElementById("query").value = "";
+        }
         document.getElementById("query").value = "";
     }    
 })
