@@ -36,6 +36,9 @@ function checkConnectivity(){
                 else if(search.indexOf("https://")>-1){
                     window.open(search);
                 }
+                else if(search.indexOf(".com")>-1){
+                    window.open("https://"+search);
+                }
                 else{
                     var url = "https://duckduckgo.com/"+search;
                     window.open(url);
